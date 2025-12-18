@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipo Pokemon!</title>
+    <script src="{% static 'app.js' %}" defer></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center " id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/api/">Sin Token</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/api/con_token/">Con Token</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="formulario-container d-flex justify-content-center">
+
+        <form class="row g-3" id="tokenForm">
+            <div class="col-auto">
+                <label for="username" class="visually-hidden">Email</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+            </div>
+            <div class="col-auto">
+                <label for="password_field" class="visually-hidden">Password</label>
+                <input type="password" class="form-control" id="password_field" placeholder="Password" required> 
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Obtener Token</button>
+            </div>
+        </form>
+    </div>
+<hr>
+
+    <main class="d-flex flex-column justify-content-center align-items-center">
+        <button class="btn btn-primary my-2" onclick="getPersonas()">Traer a todas las personas</button>
+        <textarea class="form-control" readonly style="height: 50vh; width: 60vw;" name="" id="respuesta"></textarea>
+
+    </main>
+</body>
+
+</html>

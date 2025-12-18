@@ -1,0 +1,6 @@
+## 🔑 Credenciales de Acceso (Superusuario)
+
+Para probar las funciones que requieren token (JWT), utiliza este usuario que ya está registrado en la base de datos:
+
+- **Username:** daniel
+- **Password:** Daniel12
